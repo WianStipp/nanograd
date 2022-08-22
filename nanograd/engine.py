@@ -41,6 +41,9 @@ class Value:
   def __rmul__(self, other) -> 'Value':
     return self * other
   
+  def __radd__(self, other) -> 'Value':
+    return self + other
+  
   def __pow__(self, exponent) -> 'Value':
     assert isinstance(exponent, (int, float)), f"only supports int or float, got {type(exponent)}" 
     new = Value(self.data ** exponent, (self, ), f'**{exponent}')
