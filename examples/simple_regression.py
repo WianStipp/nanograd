@@ -5,7 +5,7 @@ import math
 import random
 import matplotlib.pyplot as plt
 
-from nanograd import nn
+from nanograd import nn, plotting
 
 N_DATAPOINTS = 128
 N_EPOCHS = 90
