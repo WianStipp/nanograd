@@ -28,6 +28,9 @@ class Value:
       self.grad += 1.0 * new.grad
     new._backward = _backward
     return new
+  
+  def __sub__(self, other) -> 'Value':
+    return self + (-other)
 
   def __mul__(self, other) -> 'Value':
     other = other if isinstance(other, Value) else Value(other)
