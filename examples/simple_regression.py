@@ -46,7 +46,7 @@ def main():
   preds = [model(x)[0].data for x in X_TEST]
 
   plt.figure(figsize=(12, 8))
-  plt.title('y = x**2 + (exp(x * 0.8) if x >0.2 else 0.0)')
+  plt.title('y = x**2 + (exp(x * 0.8) if x >0.2 else 0.0) + random.normalvariate(0.0, 0.05)')
   plt.scatter(X_TRAIN, Y_TRAIN, alpha=0.2, label='train')
   plt.scatter(X_TEST, Y_TEST, label='label')
   plt.scatter(X_TEST, preds, label='prediction')
